@@ -1,19 +1,31 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
 
+// importing main components
+import Battle from './main/Battle';
+import Title from './main/Title';
+import Select from './main/Select';
+
+// app will be the smart component, everything else will just render prop data
 class App extends Component {
+  constructor(props) {
+    super(props);
+
+    // state goes here
+    this.state = {
+      // state
+    };
+
+    // functions go here
+  }
+
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
+      // react fragment allows
+      <React.Fragment>
+        <Battle />
+        <Title />
+        <Select />
+      </React.Fragment>
     );
   }
 }
