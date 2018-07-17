@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 
 // importing main components
-import Battle from './main/Battle';
-import Title from './main/Title';
-import Select from './main/Select';
+import Battle from './Battle/Battle';
+import Title from './Title/Title';
+import Select from './Select/Select';
 
 // app will be the smart component, everything else will just render prop data
 class App extends Component {
