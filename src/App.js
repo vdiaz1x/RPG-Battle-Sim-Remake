@@ -5,6 +5,9 @@ import Battle from './Battle/Battle';
 import Title from './Title/Title';
 import Select from './Select/Select';
 
+import { b1, a1 } from './being';
+
+
 // app will be the smart component, everything else will just render prop data
 class App extends Component {
   constructor(props) {
@@ -19,12 +22,14 @@ class App extends Component {
   }
 
   render() {
+    // console.log(being);
+    console.log(b1, a1);
     return (
       // react fragment allows
       <React.Fragment>
-        <Battle />
         <Title />
         <Select />
+        <Battle />
       </React.Fragment>
     );
   }

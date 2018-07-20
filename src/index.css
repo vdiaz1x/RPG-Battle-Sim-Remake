@@ -6,3 +6,11 @@
   box-sizing: border-box;
   /* font-family: sans-serif; */
 }
+
+/* main sections */
+.section{
+  height:100vh;
+  /* width:100vw; */
+  background:black;
+  color:white;
+}
