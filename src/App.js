@@ -5,7 +5,8 @@ import Battle from './Battle/Battle';
 import Title from './Title/Title';
 import Select from './Select/Select';
 
-import { b1, a1 } from './being';
+import { b1 } from './being';
+import { a1 } from './attack';
 
 
 // app will be the smart component, everything else will just render prop data
