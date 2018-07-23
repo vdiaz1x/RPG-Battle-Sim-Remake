@@ -4,6 +4,10 @@
 |--------------------------------------------------------------------------
 */
 
+import {
+  fire1, fire2, fire3, fire4,
+} from './attack';
+
 // what is a being?
 // a being is any entity that can make a move
 // two types of beings - ally and enemy
@@ -12,7 +16,6 @@
 // enemy- boss
 
 // being parameters
-// beings have name, element, HP, MP, 4 moves, an img, a sigil
 // HP/MP = hit points and mana points for ally/enemy
 // name = name of ally/enemy
 // element = element type of ally/enemy. determines strong/weak against
@@ -34,7 +37,7 @@ class Being {
   }
 }
 
-const b1 = new Being('one', 'fire', [1, 2, 3, 4], 'avatar', 'sigil');
+const b1 = new Being('flame king', 'fire', [fire1, fire2, fire3, fire4], 'avatar', 'sigil');
 // const b2 = new Being('two');
 
 export {

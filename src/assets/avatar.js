@@ -4,4 +4,6 @@
 |--------------------------------------------------------------------------
 */
 
+import circle from './avatars/circle.png';
 
+export { circle };
