@@ -1,3 +1,12 @@
 Errors will be logged here
 
-//
+//TypeError: Cannot read property '0' of undefined
+  51 |     this.target = target;
+  52 |     // static values
+  53 |     this.name = movelist[this.index][this.order];
+> 54 |     this.description = desc[this.name][this.order];
+  55 |     this.flavor = flav[this.name][this.order];
+  56 |   }
+  57 | }
+
+  solution: not to rearrange code until you have an idea of what you're doing

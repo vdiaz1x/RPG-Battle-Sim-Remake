@@ -4,6 +4,9 @@
 |--------------------------------------------------------------------------
 */
 
+// avatar for allies
 import circle from './avatars/circle.png';
 
-export { circle };
+// avatar for enemies
+
+export default { circle };

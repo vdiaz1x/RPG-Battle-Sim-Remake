@@ -4,148 +4,250 @@
 |--------------------------------------------------------------------------
 */
 
-// move list
-const movelist = [
-  // fire spells
-  'Flamberge', 'Magma Burst', 'Flame Starter', 'Inferno',
-  // water spells
-  'Wave Hammer', 'Aqua Burst', 'Cleaning Water', 'Tsunami',
-  // air spells
-  'Air Blade', 'Aero Burst', 'Refresh Breeze', 'Hurricane',
-  // earth spells
-  'Ground Mace', 'Landslide', 'Petrify', 'Earthquake',
-  // lightning spells
-  'Zap Lance', 'Bolt Burst', 'Stormblast', 'Thunder',
-  // ice spells
-  'Frost Javelin', 'Icicle', 'Cold Shock', 'Niflheim',
-  // wood spells
-  'Leaf Dagger', 'Petal Storm', 'Lifespring', 'Yggdrasil',
-  // metal spells
-  'Steel Wall', 'Iron Tower', 'Luster Purge', 'Metallurge',
-  // light spells
-  'light1', 'light2', 'light3', 'Eclipse',
-  // dark spells
-  'dark1', 'dark2', 'dark3', 'Blackout',
-  // boss spells
-  'Dark Pulse', 'Encroaching Death', 'Demon Flare', 'Gehenna',
+// this file will have the text for the moves and beings
+
+/*
+|--------------------------------------------------------------------------
+| Elements
+|--------------------------------------------------------------------------
+*/
+
+// elements in an array for easy indexing
+const elements = [
+  'Fire', 'Water', 'Air', 'Earth', 'Thunder', 'Ice', 'Wood', 'Metal', 'Light', 'Dark', 'Chaos', 'Fallen', 'Magick', 'Evil', 'Death', 'End',
 ];
 
-// description of moves
+/*
+|--------------------------------------------------------------------------
+| Names
+|--------------------------------------------------------------------------
+*/
+
+// list of names
+const beings = {
+  [elements[0]]: 'Fire',
+  [elements[1]]: 'Water',
+  [elements[2]]: 'Air',
+  [elements[3]]: 'Earth',
+  [elements[4]]: 'Thunder',
+  [elements[5]]: 'Ice',
+  [elements[6]]: 'Wood',
+  [elements[7]]: 'Metal',
+  [elements[8]]: 'Light',
+  [elements[9]]: 'Dark',
+  [elements[10]]: 'Abraxes',
+  [elements[11]]: 'Demiurge',
+  [elements[12]]: 'Goetia',
+  [elements[13]]: 'Angra Mainyu',
+  [elements[14]]: 'The Beast',
+  [elements[15]]: 'Armageddon',
+};
+
+/*
+|--------------------------------------------------------------------------
+| Move List
+|--------------------------------------------------------------------------
+*/
+
+const movelist = {
+  // fire spells
+  [elements[0]]: ['Flamberge', 'Magma Burst', 'Flame Starter', 'Inferno'],
+  // water spells
+  [elements[1]]: ['Wave Hammer', 'Aqua Burst', 'Cleaning Water', 'Tsunami'],
+  // air spells
+  [elements[2]]: ['Air Blade', 'Aero Burst', 'Refresh Breeze', 'Hurricane'],
+  // earth spells
+  [elements[3]]: ['Ground Mace', 'Landslide', 'Petrify', 'Earthquake'],
+  // lightning spells
+  [elements[4]]: ['Zap Lance', 'Bolt Burst', 'Stormblast', 'Thunder'],
+  // ice spells
+  [elements[5]]: ['Frost Javelin', 'Icicle', 'Cold Shock', 'Niflheim'],
+  // wood spells
+  [elements[6]]: ['Leaf Dagger', 'Petal Storm', 'Lifespring', 'Yggdrasil'],
+  // metal spells
+  [elements[7]]: ['Steel Wall', 'Iron Tower', 'Luster Purge', 'Metallurge'],
+  // light spells
+  [elements[8]]: ['light1', 'light2', 'light3', 'Eclipse'],
+  // dark spells
+  [elements[9]]: ['dark1', 'dark2', 'dark3', 'Blackout'],
+  // boss spells
+  [elements[10]]: ['Dark Pulse', 'Encroaching Death', 'Demon Flare', 'Gehenna'],
+};
+
+/*
+|--------------------------------------------------------------------------
+| Move Description
+|--------------------------------------------------------------------------
+*/
+
 const desc = {
   // fire spells
-  [movelist[0]]: 'Basic fire attack in the shape of a greatsword',
-  [movelist[1]]: 'A mid-tier fire spell',
-  [movelist[2]]: 'Fire spell that boosts attack',
-  [movelist[3]]: 'One of the strongest fire spells,',
+  [elements[0]]: [
+    'Basic fire attack in the shape of a greatsword',
+    'A mid-tier fire spell',
+    'Fire spell that boosts attack',
+    'One of the strongest fire spells,',
+  ],
   // water spells
-  [movelist[4]]: '',
-  [movelist[5]]: '',
-  [movelist[6]]: '',
-  [movelist[7]]: '',
+  [elements[1]]: [
+    'water',
+    'filler',
+    'filler',
+    'filler',
+  ],
   // air spells
-  [movelist[8]]: '',
-  [movelist[9]]: '',
-  [movelist[10]]: '',
-  [movelist[11]]: '',
+  [elements[2]]: [
+    'air',
+    'filler',
+    'filler',
+    'filler',
+  ],
   // earth spells
-  [movelist[12]]: '',
-  [movelist[13]]: '',
-  [movelist[14]]: '',
-  [movelist[15]]: '',
+  [elements[3]]: [
+    'earth',
+    'filler',
+    'filler',
+    'filler',
+  ],
   // lightning spells
-  [movelist[16]]: '',
-  [movelist[17]]: '',
-  [movelist[18]]: '',
-  [movelist[19]]: '',
+  [elements[4]]: [
+    'filler',
+    'filler',
+    'filler',
+    'filler',
+  ],
   // ice spells
-  [movelist[20]]: '',
-  [movelist[21]]: '',
-  [movelist[22]]: '',
-  [movelist[23]]: '',
+  [elements[5]]: [
+    'filler',
+    'filler',
+    'filler',
+    'filler',
+  ],
   // wood spells
-  [movelist[24]]: '',
-  [movelist[25]]: '',
-  [movelist[26]]: '',
-  [movelist[27]]: '',
+  [elements[6]]: [
+    'filler',
+    'filler',
+    'filler',
+    'filler',
+  ],
   // metal spells
-  [movelist[28]]: '',
-  [movelist[29]]: '',
-  [movelist[30]]: '',
-  [movelist[31]]: '',
+  [elements[7]]: [
+    'filler',
+    'filler',
+    'filler',
+    'filler',
+  ],
   // light spells
-  [movelist[32]]: '',
-  [movelist[33]]: '',
-  [movelist[34]]: '',
-  [movelist[35]]: '',
+  [elements[8]]: [
+    'filler',
+    'filler',
+    'filler',
+    'filler',
+  ],
   // dark spells
-  [movelist[36]]: '',
-  [movelist[37]]: '',
-  [movelist[38]]: '',
-  [movelist[39]]: '',
+  [elements[9]]: [
+    'filler',
+    'filler',
+    'filler',
+    'filler',
+  ],
   // boss spells
-  [movelist[40]]: '',
-  [movelist[41]]: '',
-  [movelist[42]]: '',
-  [movelist[43]]: '',
+  [elements[10]]: [
+    'filler',
+    'filler',
+    'filler',
+    'filler',
+  ],
 };
 
-// flavor text of moves
+console.log('test', desc);
+
+/*
+|--------------------------------------------------------------------------
+| Move Flavor Text
+|--------------------------------------------------------------------------
+*/
+
 const flav = {
   // fire spells
-  [movelist[0]]: 'A simple fire attack made with a burning sword.',
-  [movelist[1]]: 'A small reenactment of a volcanic eruption.',
-  [movelist[2]]: 'An advanced fire spell that mages use to strengthen their other spells.',
-  [movelist[3]]: 'A fire spell summoning the flames of Hell, burning the souls of saint and sinner alike.',
+  [elements[0]]: [
+    'A simple fire attack made with a burning sword.',
+    'A small reenactment of a volcanic eruption.',
+    'An advanced fire spell that mages use to strengthen their other spells.',
+    'A fire spell summoning the flames of Hell, burning the souls of saint and sinner alike.',
+  ],
   // water spells
-  [movelist[4]]: '',
-  [movelist[5]]: '',
-  [movelist[6]]: '',
-  [movelist[7]]: '',
+  [elements[1]]: [
+    'water',
+    'filler',
+    'filler',
+    'filler',
+  ],
   // air spells
-  [movelist[8]]: '',
-  [movelist[9]]: '',
-  [movelist[10]]: '',
-  [movelist[11]]: '',
+  [elements[2]]: [
+    'air',
+    'filler',
+    'filler',
+    'filler',
+  ],
   // earth spells
-  [movelist[12]]: '',
-  [movelist[13]]: '',
-  [movelist[14]]: '',
-  [movelist[15]]: '',
+  [elements[3]]: [
+    'earth',
+    'filler',
+    'filler',
+    'filler',
+  ],
   // lightning spells
-  [movelist[16]]: '',
-  [movelist[17]]: '',
-  [movelist[18]]: '',
-  [movelist[19]]: '',
+  [elements[4]]: [
+    'thunder',
+    'filler',
+    'filler',
+    'filler',
+  ],
   // ice spells
-  [movelist[20]]: '',
-  [movelist[21]]: '',
-  [movelist[22]]: '',
-  [movelist[23]]: '',
+  [elements[5]]: [
+    'ice',
+    'filler',
+    'filler',
+    'filler',
+  ],
   // wood spells
-  [movelist[24]]: '',
-  [movelist[25]]: '',
-  [movelist[26]]: '',
-  [movelist[27]]: '',
+  [elements[6]]: [
+    'wood',
+    'filler',
+    'filler',
+    'filler',
+  ],
   // metal spells
-  [movelist[28]]: '',
-  [movelist[29]]: '',
-  [movelist[30]]: '',
-  [movelist[31]]: '',
+  [elements[7]]: [
+    'metal',
+    'filler',
+    'filler',
+    'filler',
+  ],
   // light spells
-  [movelist[32]]: '',
-  [movelist[33]]: '',
-  [movelist[34]]: '',
-  [movelist[35]]: '',
+  [elements[8]]: [
+    'light',
+    'filler',
+    'filler',
+    'filler',
+  ],
   // dark spells
-  [movelist[36]]: '',
-  [movelist[37]]: '',
-  [movelist[38]]: '',
-  [movelist[39]]: '',
+  [elements[9]]: [
+    'dark',
+    'filler',
+    'filler',
+    'filler',
+  ],
   // boss spells
-  [movelist[40]]: '',
-  [movelist[41]]: '',
-  [movelist[42]]: '',
-  [movelist[43]]: '',
+  [elements[10]]: [
+    'thing',
+    'filler',
+    'filler',
+    'filler',
+  ],
 };
 
-export { movelist, desc, flav };
+export {
+  elements, beings, movelist, desc, flav,
+};

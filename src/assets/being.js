@@ -1,13 +1,14 @@
 /*
 |--------------------------------------------------------------------------
-| Class for Ally/Enemy
+| Class for Being (Ally/Enemy)
 |--------------------------------------------------------------------------
 */
 
 import { firelist, waterlist } from './attack';
-import img from './avatars/circle.png';
-import mars from './sigils/mars.png';
-import nep from './sigils/neptune.png';
+import { beings } from './dictionary';
+
+import avatars from './avatars';
+import sigils from './sigils';
 
 // what is a being?
 // a being is any entity that can make a move
@@ -25,8 +26,9 @@ import nep from './sigils/neptune.png';
 // sigil = image for the ally/enemy sigil
 
 class Being {
-  constructor(name, element, moves, avatar, sigil) {
+  constructor(index, name, element, moves, avatar, sigil) {
     // user input values
+    this.index = index;
     this.name = name;
     this.element = element;
     this.moves = moves;
@@ -45,10 +47,17 @@ class Being {
 | Being List
 |--------------------------------------------------------------------------
 */
+// allies
+const fire = new Being(0, beings[0], 'fire', firelist, avatars.circle, sigils.fire);
+const water = new Being(1, beings[1], 'water', waterlist, avatars.circle, sigils.water);
 
-const fire = new Being('flame king', 'fire', firelist, img, mars);
-const water = new Being('wave king', 'water', waterlist, img, nep);
+const allyRoster = { fire, water };
+
+// enemies
+const abraxes = new Being(10, beings[10], 'abraxes', firelist, avatars.circle, sigils.fire);
+
+const enemyRoster = { abraxes };
 
 export {
-  fire, water,
+  allyRoster, enemyRoster,
 };
