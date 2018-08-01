@@ -24,8 +24,8 @@ const elements = [
 */
 
 // list of names
-const beings = {
-  [elements[0]]: 'Fire',
+const names = {
+  [elements[0]]: 'Fire King',
   [elements[1]]: 'Water',
   [elements[2]]: 'Air',
   [elements[3]]: 'Earth',
@@ -86,14 +86,14 @@ const desc = {
     'Basic fire attack in the shape of a greatsword',
     'A mid-tier fire spell',
     'Fire spell that boosts attack',
-    'One of the strongest fire spells,',
+    'One of the strongest fire spells',
   ],
   // water spells
   [elements[1]]: [
-    'water',
-    'filler',
-    'filler',
-    'filler',
+    'Basic water attack in the shape of a hammer',
+    'A mid-tier water spell',
+    'Water Spell that restores HP',
+    'One of the strongest water spells',
   ],
   // air spells
   [elements[2]]: [
@@ -160,8 +160,6 @@ const desc = {
   ],
 };
 
-console.log('test', desc);
-
 /*
 |--------------------------------------------------------------------------
 | Move Flavor Text
@@ -178,10 +176,10 @@ const flav = {
   ],
   // water spells
   [elements[1]]: [
-    'water',
-    'filler',
-    'filler',
-    'filler',
+    'A simple water attack made with a humid hammer.',
+    'A small reenactment of a tsumani.',
+    'An advaced water spell that mages use to heal themselves of damage.',
+    'A water spell summoning the mighty waves of the ocean to destroy everything in its path.',
   ],
   // air spells
   [elements[2]]: [
@@ -249,5 +247,5 @@ const flav = {
 };
 
 export {
-  elements, beings, movelist, desc, flav,
+  elements, names, movelist, desc, flav,
 };

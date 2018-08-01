@@ -4,8 +4,8 @@
 |--------------------------------------------------------------------------
 */
 
-import { firelist, waterlist } from './attack';
-import { beings } from './dictionary';
+import movelists from './attack';
+import { elements, names } from './dictionary';
 
 import avatars from './avatars';
 import sigils from './sigils';
@@ -26,15 +26,16 @@ import sigils from './sigils';
 // sigil = image for the ally/enemy sigil
 
 class Being {
-  constructor(index, name, element, moves, avatar, sigil) {
+  constructor(index) {
     // user input values
     this.index = index;
-    this.name = name;
-    this.element = element;
-    this.moves = moves;
-    this.avatar = avatar;
-    this.sigil = sigil;
+
     // static values
+    this.element = elements[index];
+    this.name = names[this.element];
+    this.movelist = movelists[this.element];
+    this.avatar = avatars[this.element];
+    this.sigil = sigils[this.element];
     this.maxHP = 999;
     this.currentHP = this.maxHP;
     this.maxMP = 999;
@@ -48,13 +49,13 @@ class Being {
 |--------------------------------------------------------------------------
 */
 // allies
-const fire = new Being(0, beings[0], 'fire', firelist, avatars.circle, sigils.fire);
-const water = new Being(1, beings[1], 'water', waterlist, avatars.circle, sigils.water);
+const fire = new Being(0);
+const water = new Being(1);
 
 const allyRoster = { fire, water };
 
 // enemies
-const abraxes = new Being(10, beings[10], 'abraxes', firelist, avatars.circle, sigils.fire);
+const abraxes = new Being(10);
 
 const enemyRoster = { abraxes };
 

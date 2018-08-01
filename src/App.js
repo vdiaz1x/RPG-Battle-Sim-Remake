@@ -6,7 +6,7 @@ import Title from './Title/Title';
 import Select from './Select/Select';
 
 import { allyRoster, enemyRoster } from './assets/being';
-import { firelist } from './assets/attack';
+// import { firelist } from './assets/attack';
 
 
 // app will be the smart component, everything else will just render prop data
@@ -25,7 +25,7 @@ class App extends Component {
   render() {
     // console.log(being);
     console.log(allyRoster.fire);
-    console.log(firelist);
+    // console.log(firelist);
     return (
       // react fragment allows
       <React.Fragment>

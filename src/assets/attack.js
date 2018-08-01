@@ -52,6 +52,7 @@ class Move {
     this.effect = effect;
     this.area = area;
     this.target = target;
+
     // static values
     this.name = movelist[element][this.order];
     this.description = desc[element][this.order];
@@ -83,6 +84,24 @@ const water4 = new Move(3, elements[1], 100, 0, 10, 10, 'single', 'enemy');
 const firelist = [fire1, fire2, fire3, fire4];
 const waterlist = [water1, water2, water3, water4];
 
-export {
-  firelist, waterlist,
+// list of moveslists
+const moves = {
+  [elements[0]]: firelist,
+  [elements[1]]: waterlist,
+  // [elements[2]]: airlist,
+  // [elements[3]]: earthlist,
+  // [elements[4]]: thunderlist,
+  // [elements[5]]: icelist,
+  // [elements[6]]: woodlist,
+  // [elements[7]]: metallist,
+  // [elements[8]]: lightlist,
+  // [elements[9]]: darklist,
+  // [elements[10]]: chaoslist,
+  // [elements[11]]: fallenlist,
+  // [elements[12]]: magicklist,
+  // [elements[13]]: evillist,
+  // [elements[14]]: deathlist,
+  // [elements[15]]: endlist,
 };
+
+export default moves;
