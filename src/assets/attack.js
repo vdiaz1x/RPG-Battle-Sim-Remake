@@ -5,9 +5,10 @@
 */
 
 // importing movelist, descriptions, and flavor text
-import {
-  elements, desc, flav, movelist,
-} from './dictionary';
+import elements from './elements';
+import movelists from './movelists';
+import desc from './description';
+import flav from './flavor';
 
 // what is a move?
 // moves are actions that have various effects, like dealing damage,
@@ -54,7 +55,7 @@ class Move {
     this.target = target;
 
     // static values
-    this.name = movelist[element][this.order];
+    this.name = movelists[element][this.order];
     this.description = desc[element][this.order];
     this.flavor = flav[element][this.order];
   }

@@ -4,7 +4,7 @@
 |--------------------------------------------------------------------------
 */
 
-import { elements } from './dictionary';
+import elements from './elements';
 
 // avatar for allies
 import circle from './avatars/circle.png';

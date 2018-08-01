@@ -4,7 +4,7 @@
 |--------------------------------------------------------------------------
 */
 
-import { elements } from './dictionary';
+import elements from './elements';
 
 // sigil for allies
 import metal from './sigils/mercury.png';

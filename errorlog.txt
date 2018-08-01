@@ -10,3 +10,9 @@ Errors will be logged here
   57 | }
 
   solution: not to rearrange code until you have an idea of what you're doing
+
+// ./src/assets/avatars.js
+Module not found: Can't resolve './dictionary' in '../../projects/RPG-Battle-Sim-Remake/src/assets'
+This error occurred during the build time and cannot be dismissed.
+
+solution: change paths in all files check all files for this that need it

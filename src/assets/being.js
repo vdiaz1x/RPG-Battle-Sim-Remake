@@ -4,9 +4,9 @@
 |--------------------------------------------------------------------------
 */
 
-import movelists from './attack';
-import { elements, names } from './dictionary';
-
+import elements from './elements';
+import moves from './attack';
+import names from './names';
 import avatars from './avatars';
 import sigils from './sigils';
 
@@ -33,7 +33,7 @@ class Being {
     // static values
     this.element = elements[index];
     this.name = names[this.element];
-    this.movelist = movelists[this.element];
+    this.movelist = moves[this.element];
     this.avatar = avatars[this.element];
     this.sigil = sigils[this.element];
     this.maxHP = 999;
