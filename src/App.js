@@ -5,7 +5,7 @@ import Battle from './Battle/Battle';
 import Title from './Title/Title';
 import Select from './Select/Select';
 
-import { allyRoster, enemyRoster } from './assets/being';
+import list from './assets/being';
 // import { firelist } from './assets/attack';
 
 
@@ -24,7 +24,7 @@ class App extends Component {
 
   render() {
     // console.log(being);
-    console.log(allyRoster.fire);
+    console.log(list);
     // console.log(firelist);
     return (
       // react fragment allows
