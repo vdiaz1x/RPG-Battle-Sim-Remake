@@ -16,3 +16,29 @@ Module not found: Can't resolve './dictionary' in '../../projects/RPG-Battle-Sim
 This error occurred during the build time and cannot be dismissed.
 
 solution: change paths in all files check all files for this that need it
+
+TypeError: Cannot read property 'map' of undefined
+(anonymous function)
+src/assets/attack.js:127
+  124 |
+  125 | const moves = elements.map((elem, i) => {
+  126 |   console.log(movelists[elem]);
+> 127 |   movelists[elem].map((e, j) => new Move(i, j));
+  128 | });
+  129 |
+  130 | console.log(moves);
+
+  solution: make sure all arrays and/or objects are complete before iterating over them
+
+  TypeError: Cannot read property '0' of undefined
+new Move
+src/assets/attack.js:62
+  59 |     this.effect = effects[this.element][this.order].effect;
+  60 |     this.area = effects[this.element][this.order].area;
+  61 |     this.target = effects[this.element][this.order].target;
+> 62 |     this.description = desc[this.element][this.order];
+  63 |     this.flavor = flav[this.element][this.order];
+  64 |   }
+  65 | }
+
+  solution: same as above

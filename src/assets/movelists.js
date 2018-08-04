@@ -29,6 +29,11 @@ const movelist = {
   [elements[9]]: ['dark1', 'dark2', 'dark3', 'Blackout'],
   // boss spells
   [elements[10]]: ['Dark Pulse', 'Encroaching Death', 'Demon Flare', 'Gehenna'],
+  [elements[11]]: ['Dark Pulse', 'Encroaching Death', 'Demon Flare', 'Gehenna'],
+  [elements[12]]: ['Dark Pulse', 'Encroaching Death', 'Demon Flare', 'Gehenna'],
+  [elements[13]]: ['Dark Pulse', 'Encroaching Death', 'Demon Flare', 'Gehenna'],
+  [elements[14]]: ['Dark Pulse', 'Encroaching Death', 'Demon Flare', 'Gehenna'],
+  [elements[15]]: ['Dark Pulse', 'Encroaching Death', 'Demon Flare', 'Gehenna'],
 };
 
 export default movelist;

@@ -70,58 +70,13 @@ class Move {
 |--------------------------------------------------------------------------
 */
 
-// first two and last move are the damage moves, the third move is the status move (pattern)
-
-// fire moves
-const fire1 = new Move(0, 0);
-const fire2 = new Move(0, 1);
-const fire3 = new Move(0, 2);
-const fire4 = new Move(0, 3);
-
-// water moves
-const water1 = new Move(1, 0);
-const water2 = new Move(1, 1);
-const water3 = new Move(1, 2);
-const water4 = new Move(1, 3);
-
-// adding moves to lists
-const firelist = [fire1, fire2, fire3, fire4];
-const waterlist = [water1, water2, water3, water4];
-const airlist = [];
-const earthlist = [];
-const thunderlist = [];
-const icelist = [];
-const woodlist = [];
-const metallist = [];
-const lightlist = [];
-const darklist = [];
-const chaoslist = [];
-const fallenlist = [];
-const magicklist = [];
-const evillist = [];
-const deathlist = [];
-const endlist = [];
-
-// list of moveslists
-const moves = {
-  [elements[0]]: firelist,
-  [elements[1]]: waterlist,
-  [elements[2]]: airlist,
-  [elements[3]]: earthlist,
-  [elements[4]]: thunderlist,
-  [elements[5]]: icelist,
-  [elements[6]]: woodlist,
-  [elements[7]]: metallist,
-  [elements[8]]: lightlist,
-  [elements[9]]: darklist,
-  [elements[10]]: chaoslist,
-  [elements[11]]: fallenlist,
-  [elements[12]]: magicklist,
-  [elements[13]]: evillist,
-  [elements[14]]: deathlist,
-  [elements[15]]: endlist,
-};
-
-console.log(moves);
+// loop over the list of moves to create all the attacks
+// first loops over each element, and then loops over
+// the names of the attacks for each element
+const moves = elements.map(
+  (element, index) => movelists[element].map(
+    (move, order) => new Move(index, order),
+  ),
+);
 
 export default moves;

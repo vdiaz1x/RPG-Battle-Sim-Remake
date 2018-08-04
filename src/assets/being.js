@@ -35,7 +35,7 @@ class Being {
     // static values
     this.element = elements[index];
     this.name = names[this.element];
-    this.movelist = moves[this.element];
+    this.movelist = moves[this.index];
     this.avatar = avatars[this.element];
     this.sigil = sigils[this.element];
     this.maxHP = HP[this.element];
@@ -53,10 +53,7 @@ class Being {
 
 // loop over the list of elements to create all the beings
 // and put them in an array
-const roster = elements.map((elem, i) => {
-  const being = new Being(i);
-  return being;
-});
+const roster = elements.map((element, index) => new Being(index));
 
 // split the list into
 const allies = roster.slice(0, 10);

@@ -25,7 +25,7 @@ class App extends Component {
   render() {
     console.log(roster);
     return (
-      // react fragment allows rendering of several components without having a weapper div on them
+      // react fragment allows rendering of several components without having a wrapper div on them
       <React.Fragment>
         <Title />
         <Select />
