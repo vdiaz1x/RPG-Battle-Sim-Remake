@@ -50,47 +50,18 @@ class Being {
 | Being List
 |--------------------------------------------------------------------------
 */
-// allies
-// const fire = new Being(0);
-// const water = new Being(1);
-// const air = new Being(2);
-// const earth = new Being(3);
-// const thunder = new Being(4);
-// const ice = new Being(5);
-// const wood = new Being(6);
-// const metal = new Being(7);
-// const light = new Being(8);
-// const dark = new Being(9);
 
-// const allyRoster = {
-//   fire, water, air, earth, thunder, ice, wood, metal, light, dark,
-// };
-
-const list = elements.map((elem, i) => {
+// loop over the list of elements to create all the beings
+// and put them in an array
+const roster = elements.map((elem, i) => {
   const being = new Being(i);
   return being;
 });
 
-// console.log(list);
-
-const allyRoster = list.slice(0, 10);
-const enemyRoster = list.slice(10, -1);
-
-// console.log(allyRoster, enemyRoster);
-
-// enemies
-// const abraxes = new Being(10);
-// const demiurge = new Being(11);
-// const goetia = new Being(12);
-// const angra = new Being(13);
-// const beast = new Being(14);
-// const armageddon = new Being(15);
-
-// const enemyRoster = {
-//   abraxes, demiurge, goetia, angra, beast, armageddon,
-// };
+// split the list into
+const allies = roster.slice(0, 10);
+const enemies = roster.slice(10, 16);
 
 export default {
-  // allyRoster, enemyRoster,
-  list,
+  allies, enemies,
 };

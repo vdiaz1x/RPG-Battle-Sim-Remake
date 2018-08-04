@@ -5,7 +5,7 @@ import Battle from './Battle/Battle';
 import Title from './Title/Title';
 import Select from './Select/Select';
 
-import list from './assets/being';
+import roster from './assets/being';
 // import { firelist } from './assets/attack';
 
 
@@ -23,11 +23,9 @@ class App extends Component {
   }
 
   render() {
-    // console.log(being);
-    console.log(list);
-    // console.log(firelist);
+    console.log(roster);
     return (
-      // react fragment allows
+      // react fragment allows rendering of several components without having a weapper div on them
       <React.Fragment>
         <Title />
         <Select />

@@ -9,15 +9,18 @@ import elements from './elements';
 import movelists from './movelists';
 import desc from './description';
 import flav from './flavor';
+import values from './values';
+import effects from './effects';
 
 // what is a move?
 // moves are actions that have various effects, like dealing damage,
 // healing HP/MP, and buff/debuff stats
 
 // move parameters
-// index - the index number of the moves (all moves are part of a catalog)
-// the moves are in order, startig with the fire moves, and ending with all the enemy moves
+// index - the index number of the element (this helps in referencing the other properties)
 // index number starts from 0 (array indexing)
+
+// order- the order in which the attack appears in the collection of attacks for that element
 
 // name - name of move
 
@@ -42,22 +45,22 @@ import flav from './flavor';
 // game lore text (worldbuilding)
 
 class Move {
-  constructor(index, element, order, dmg, status, cost, effect, area, target) {
+  constructor(index, order) {
     // user input values
     this.index = index;
-    this.element = element;
     this.order = order;
-    this.dmg = dmg;
-    this.status = status;
-    this.cost = cost;
-    this.effect = effect;
-    this.area = area;
-    this.target = target;
 
     // static values
-    this.name = movelists[element][this.order];
-    this.description = desc[element][this.order];
-    this.flavor = flav[element][this.order];
+    this.element = elements[this.index];
+    this.name = movelists[this.element][this.order];
+    this.cost = values[this.element][this.order].cost;
+    this.dmg = values[this.element][this.order].dmg;
+    this.status = values[this.element][this.order].status;
+    this.effect = effects[this.element][this.order].effect;
+    this.area = effects[this.element][this.order].area;
+    this.target = effects[this.element][this.order].target;
+    this.description = desc[this.element][this.order];
+    this.flavor = flav[this.element][this.order];
   }
 }
 
@@ -70,16 +73,16 @@ class Move {
 // first two and last move are the damage moves, the third move is the status move (pattern)
 
 // fire moves
-const fire1 = new Move(0, elements[0], 0, 100, 0, 10, 10, 'single', 'enemy');
-const fire2 = new Move(0, elements[0], 1, 100, 0, 10, 10, 'single', 'enemy');
-const fire3 = new Move(0, elements[0], 2, 0, 0.20, 10, 10, 'single', 'ally');
-const fire4 = new Move(0, elements[0], 3, 100, 0, 10, 10, 'single', 'enemy');
+const fire1 = new Move(0, 0);
+const fire2 = new Move(0, 1);
+const fire3 = new Move(0, 2);
+const fire4 = new Move(0, 3);
 
 // water moves
-const water1 = new Move(0, elements[1], 100, 0, 10, 10, 'single', 'enemy');
-const water2 = new Move(1, elements[1], 100, 0, 10, 10, 'single', 'enemy');
-const water3 = new Move(2, elements[1], 0, 0.20, 10, 10, 'single', 'ally');
-const water4 = new Move(3, elements[1], 100, 0, 10, 10, 'single', 'enemy');
+const water1 = new Move(1, 0);
+const water2 = new Move(1, 1);
+const water3 = new Move(1, 2);
+const water4 = new Move(1, 3);
 
 // adding moves to lists
 const firelist = [fire1, fire2, fire3, fire4];
@@ -118,5 +121,7 @@ const moves = {
   [elements[14]]: deathlist,
   [elements[15]]: endlist,
 };
+
+console.log(moves);
 
 export default moves;
