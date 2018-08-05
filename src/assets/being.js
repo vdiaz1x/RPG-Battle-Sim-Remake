@@ -9,8 +9,7 @@ import moves from './attack';
 import names from './names';
 import avatars from './avatars';
 import sigils from './sigils';
-import HP from './HP';
-import MP from './MP';
+import points from './points';
 
 // what is a being?
 // a being is any entity that can make a move
@@ -38,9 +37,9 @@ class Being {
     this.movelist = moves[this.index];
     this.avatar = avatars[this.element];
     this.sigil = sigils[this.element];
-    this.maxHP = HP[this.element];
+    this.maxHP = points[this.element].HP;
     this.currentHP = this.maxHP;
-    this.maxMP = MP[this.element];
+    this.maxMP = points[this.element].MP;
     this.currentMP = this.maxMP;
   }
 }
