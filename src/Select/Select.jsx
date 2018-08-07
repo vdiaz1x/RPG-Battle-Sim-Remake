@@ -14,7 +14,7 @@ class Select extends Component {
 
   render() {
     return (
-      <section className="section">
+      <section className="section select">
         THIS IS SELECT
       </section>
     );

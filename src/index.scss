@@ -4,18 +4,21 @@
 |--------------------------------------------------------------------------
 */
 
-// imports
-@import "./Battle/battle.scss";
-
+// reset margin and padding for all elements, and set border-box box-sizing
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+// imports
+@import "./Title/title.scss";
+@import "./Select/select.scss";
+@import "./Battle/battle.scss";
+
 /* main sections */
 .section{
   height:100vh;
-  background:black;
+  // background:black;
   color:white;
 }

@@ -14,7 +14,7 @@ class Title extends Component {
 
   render() {
     return (
-      <section className="section">
+      <section className="section title">
         THIS IS TITLE
       </section>
     );
