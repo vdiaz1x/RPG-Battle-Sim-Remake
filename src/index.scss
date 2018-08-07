@@ -3,13 +3,16 @@
 | Main SCSS File
 |--------------------------------------------------------------------------
 */
+
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+}
 
 /* main sections */
-.section {
-  height: 100vh;
-  background: black;
-  color: white; }
+.section{
+  height:100vh;
+  background:black;
+  color:white;
+}
