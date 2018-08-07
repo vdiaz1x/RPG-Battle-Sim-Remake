@@ -14,7 +14,7 @@ class Battle extends Component {
 
   render() {
     return (
-      <section className="section">
+      <section className="section battle">
         THIS IS BATTLE
       </section>
     );
