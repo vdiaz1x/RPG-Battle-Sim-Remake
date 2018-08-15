@@ -42,3 +42,7 @@ src/assets/attack.js:62
   65 | }
 
   solution: same as above
+
+  Button(...): Nothing was returned from render. This usually means a return statement is missing. Or, to render nothing, return null.
+
+  solution: return something in functional components

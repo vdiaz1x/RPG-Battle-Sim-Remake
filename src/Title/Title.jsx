@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import Button from './components/Button';
+
 class Title extends Component {
   constructor(props) {
     super(props);
@@ -14,8 +16,12 @@ class Title extends Component {
 
   render() {
     return (
-      <section className="section title">
+      <section className="section title flex-center">
         THIS IS TITLE
+        <div className="flex-center button-container-title margin">
+          <Button message="Brave" />
+          <Button message="Coward" />
+        </div>
       </section>
     );
   }
