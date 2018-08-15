@@ -10,17 +10,26 @@ class Title extends Component {
     this.state = {
       // state
     };
-
-    // functions go here
   }
+
+  // functions go here
+  // declare functions with arrow declarations to auto-bind function
+  initiate = () => console.log('start game');
+  restart=()=>console.log("game over")
 
   render() {
     return (
       <section className="section title flex-center">
         THIS IS TITLE
         <div className="flex-center button-container-title margin">
-          <Button message="Brave" />
-          <Button message="Coward" />
+          <Button
+            message="Brave"
+            play={this.initiate}
+          />
+          <Button
+            message="Coward"
+            play={this.restart}
+          />
         </div>
       </section>
     );
