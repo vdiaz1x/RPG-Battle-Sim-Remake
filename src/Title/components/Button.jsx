@@ -7,7 +7,7 @@ function Button(props) {
   return (
     <button
       type="button"
-      className="button button-title"
+      className="button button-title brackets_left brackets_right"
       onClick={play}
     >
       {message}
