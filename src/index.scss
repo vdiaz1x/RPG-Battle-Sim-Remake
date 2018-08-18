@@ -49,43 +49,43 @@
   outline:none;
 }
 
-.brackets_left, .brackets_right{
-  position:relative;
-}
+// .brackets_left, .brackets_right{
+//   position:relative;
+// }
 
-.brackets_left::before, .brackets_left::after{
-  @include pseudo(30%, 10%);
-  border-left: 2px solid white;
-}
+// .brackets_left::before, .brackets_left::after{
+//   @include pseudo(30%, 10%);
+//   border-left: 2px solid white;
+// }
 
-.brackets_left::before{
-  top:0;
-  left:0;
-  border-top: 2px solid white;
-}
+// .brackets_left::before{
+//   top:0;
+//   left:0;
+//   border-top: 2px solid white;
+// }
 
-.brackets_left::after{
-  bottom:0;
-  left:0;
-  border-bottom: 2px solid white;
-}
+// .brackets_left::after{
+//   bottom:0;
+//   left:0;
+//   border-bottom: 2px solid white;
+// }
 
-.brackets_right::before, .brackets_right::after{
-  @include pseudo(30%, 10%);
-  border-right: 2px solid white;
-}
+// .brackets_right::before, .brackets_right::after{
+//   @include pseudo(30%, 10%);
+//   border-right: 2px solid white;
+// }
 
-.brackets_right::before{
-  top:0;
-  right:0;
-  border-top: 2px solid white;
-}
+// .brackets_right::before{
+//   top:0;
+//   right:0;
+//   border-top: 2px solid white;
+// }
 
-.brackets_right::after{
-  bottom:0;
-  right:0;
-  border-bottom: 2px solid white;
-}
+// .brackets_right::after{
+//   bottom:0;
+//   right:0;
+//   border-bottom: 2px solid white;
+// }
 
 // utility
 .flex-center{
