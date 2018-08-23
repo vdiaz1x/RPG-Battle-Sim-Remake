@@ -9,16 +9,104 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Sawarabi Mincho', sans-serif;
+}
+
+/*
+|--------------------------------------------------------------------------
+| All
+|--------------------------------------------------------------------------
+*/
+
+// mixins
+@mixin pseudo($h, $w, $pos: absolute, $content: ''){
+  height:$h;
+  width:$w;
+  content: $content;
+  position: $pos;
+}
+
+
+// @mixin top_bracket
+
+
+/* main sections */
+.section{
+  height:100vh;
+  background:black;
+  color:white;
+}
+
+// universals
+.button{
+  padding:20px;
+  font-weight:bold;
+  border:none;
+  cursor:pointer;
+}
+
+.button:focus{
+  outline:none;
+}
+
+// .brackets_left, .brackets_right{
+//   position:relative;
+// }
+
+// .brackets_left::before, .brackets_left::after{
+//   @include pseudo(30%, 10%);
+//   border-left: 2px solid white;
+// }
+
+// .brackets_left::before{
+//   top:0;
+//   left:0;
+//   border-top: 2px solid white;
+// }
+
+// .brackets_left::after{
+//   bottom:0;
+//   left:0;
+//   border-bottom: 2px solid white;
+// }
+
+// .brackets_right::before, .brackets_right::after{
+//   @include pseudo(30%, 10%);
+//   border-right: 2px solid white;
+// }
+
+// .brackets_right::before{
+//   top:0;
+//   right:0;
+//   border-top: 2px solid white;
+// }
+
+// .brackets_right::after{
+//   bottom:0;
+//   right:0;
+//   border-bottom: 2px solid white;
+// }
+
+// utility
+.flex-center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.margin{
+  margin: 0 auto;
+}
+
+.full-width{
+  width:100vw;
+}
+
+.full-height{
+  height:100vh;
 }
 
 // imports
 @import "./Title/title.scss";
 @import "./Select/select.scss";
 @import "./Battle/battle.scss";
-
-/* main sections */
-.section{
-  height:100vh;
-  // background:black;
-  color:white;
-}
